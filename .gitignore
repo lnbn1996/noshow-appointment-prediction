@@ -1,0 +1,11 @@
+# Dữ liệu gốc (CC BY-NC-SA 4.0), không đăng lại
+data/*.csv
+data/*.zip
+__pycache__/
+*.pyc
+# File trung gian LaTeX
+*.aux
+*.log
+*.out
+*.bbl
+*.blg

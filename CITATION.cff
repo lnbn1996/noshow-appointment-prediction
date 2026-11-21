@@ -1,0 +1,26 @@
+cff-version: 1.2.0
+message: "Nếu bạn dùng mã nguồn này, vui lòng trích dẫn như sau."
+title: "noshow-appointment-prediction: dự đoán bệnh nhân vắng mặt lịch hẹn khám bằng học máy"
+type: software
+authors:
+  - family-names: "Lê Nguyễn"
+    given-names: "Bảo Ngọc"
+    orcid: "https://orcid.org/0009-0006-0714-6872"
+    affiliation: "Trường Đại học Cần Thơ"
+date-released: "2026-11-21"
+license: MIT
+# TODO: thay <ten-tai-khoan> bằng tên tài khoản GitHub sau khi tạo repo
+repository-code: "https://github.com/<ten-tai-khoan>/noshow-appointment-prediction"
+keywords:
+  - no-show
+  - machine learning
+  - random forest
+  - healthcare appointments
+references:
+  - type: dataset
+    title: "Medical Appointment No Shows"
+    authors:
+      - family-names: "Hoppen"
+        given-names: "Joni"
+    url: "https://www.kaggle.com/datasets/joniarroba/noshowappointments"
+    license: CC-BY-NC-SA-4.0

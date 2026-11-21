@@ -9,8 +9,7 @@ authors:
     affiliation: "Trường Đại học Cần Thơ"
 date-released: "2026-11-21"
 license: MIT
-# TODO: thay <ten-tai-khoan> bằng tên tài khoản GitHub sau khi tạo repo
-repository-code: "https://github.com/<ten-tai-khoan>/noshow-appointment-prediction"
+repository-code: "https://github.com/lnbn1996/noshow-appointment-prediction"
 keywords:
   - no-show
   - machine learning

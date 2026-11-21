@@ -20,14 +20,14 @@ Dự đoán bệnh nhân vắng mặt lịch hẹn khám (no-show) bằng học 
 | Cây quyết định | 0,719 | 0,806 | 0,304 | 0,441 |
 | Rừng ngẫu nhiên | 0,723 | 0,829 | 0,303 | 0,443 |
 
-Số ngày đặt trước là biến quan trọng nhất (0,78). Chi tiết ở `docs/bai_bao_overleaf.pdf` và `docs/poster_A0.pdf`.
+Số ngày đặt trước là biến quan trọng nhất (0,78). Chi tiết ở `docs/bai_bao_overleaf.pdf`.
 
 ## Cấu trúc thư mục
 ```
 data/      chỉ chứa hướng dẫn tải dữ liệu (không đăng lại dữ liệu gốc)
 src/       phan_tich_noshow.py: huấn luyện, đánh giá, sinh hình
 results/   ket_qua.json và các hình PNG; results/poster/ là bản hình lớn cho poster
-docs/      bài báo (PDF), poster A0 (PDF), báo cáo so sánh giấy phép
+docs/      bài báo (PDF), báo cáo so sánh giấy phép
 ```
 
 ## Cách chạy

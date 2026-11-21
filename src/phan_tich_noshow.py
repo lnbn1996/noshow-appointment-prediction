@@ -19,6 +19,13 @@ POSTER = "--poster" in sys.argv  # python phan_tich_noshow.py --poster -> hinh_p
 DPI = 400 if POSTER else 200
 out = here.parent / "results" / ("poster" if POSTER else ""); out.mkdir(parents=True, exist_ok=True)
 plt.rcParams.update({"font.size": 15 if POSTER else 11, "axes.spines.top": False, "axes.spines.right": False})
+
+if POSTER:  # dung font Inter cho hinh poster neu co (khop font chu cua poster)
+    import matplotlib.font_manager as fm
+    for _p in ("C:/Program Files/MiKTeX/fonts/opentype/public/inter/Inter-Regular.otf",
+               "/usr/share/texlive/texmf-dist/fonts/opentype/public/inter/Inter-Regular.otf"):
+        if pathlib.Path(_p).exists():
+            fm.fontManager.addfont(_p); plt.rcParams["font.family"] = "Inter"; break
 C = {"No": "#4C78A8", "Yes": "#E45756"}
 
 df = pd.read_csv(zipfile.ZipFile(zp).open("KaggleV2-May-2016.csv"))

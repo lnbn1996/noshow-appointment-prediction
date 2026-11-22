@@ -14,6 +14,6 @@ Cảm ơn bạn đã quan tâm. Repo này là bài thực hành học tập, nh�
 
 ## Quy ước
 - Python 3.10 trở lên, mã theo PEP 8, đặt `random_state` cố định để tái lập được.
-- Không đưa dữ liệu gốc (CSV) vào repo: dữ liệu theo giấy phép CC BY-NC-SA 4.0, xem `data/README.md`.
+- Không sửa tệp dữ liệu trong `data/` (CC BY-NC-SA 4.0, xem `data/README.md`); nếu cần dữ liệu đã xử lý, ghi ra `results/` và nêu rõ đã chỉnh sửa. Không thêm dữ liệu khác khi chưa kiểm tra giấy phép.
 - Không thêm thông tin định danh bệnh nhân dưới bất kỳ hình thức nào.
 - Đóng góp mã sẽ theo giấy phép MIT của repo.

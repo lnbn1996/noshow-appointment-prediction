@@ -1,0 +1,20 @@
+Thông báo giấy phép cho thư mục data/
+
+Tệp KaggleV2-May-2016.csv trong thư mục này KHÔNG thuộc giấy phép MIT của repo.
+
+Tên:        Medical Appointment No Shows
+Tác giả:    Joni Hoppen (Kaggle: joniarroba)
+Nguồn:      https://www.kaggle.com/datasets/joniarroba/noshowappointments
+Giấy phép:  Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International
+            (CC BY-NC-SA 4.0)
+Toàn văn:   https://creativecommons.org/licenses/by-nc-sa/4.0/legalcode
+Tóm tắt:    https://creativecommons.org/licenses/by-nc-sa/4.0/
+Chỉnh sửa:  Không. Tệp được đưa vào nguyên vẹn (SHA-256:
+            9132d3e7d0246617df9041d3764f20ad6f08e7b0d9f0997fa254fc5e52eda27d).
+
+Dữ liệu được chia sẻ lại dưới cùng giấy phép CC BY-NC-SA 4.0. Khi dùng lại phải
+ghi nguồn như trên, chỉ dùng phi thương mại, và giữ cùng giấy phép cho bản chia
+sẻ lại hoặc bản chỉnh sửa. Xem thêm data/README.md.
+
+Giấy phép MIT ở tệp LICENSE tại thư mục gốc chỉ áp dụng cho mã nguồn và tài liệu
+do tác giả repo viết.

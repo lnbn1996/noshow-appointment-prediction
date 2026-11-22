@@ -20,27 +20,28 @@ Dự đoán bệnh nhân vắng mặt lịch hẹn khám (no-show) bằng học 
 | Cây quyết định | 0,719 | 0,806 | 0,304 | 0,441 |
 | Rừng ngẫu nhiên | 0,723 | 0,829 | 0,303 | 0,443 |
 
-Số ngày đặt trước là biến quan trọng nhất (0,78). Chi tiết ở `docs/bai_bao_overleaf.pdf`.
+Số ngày đặt trước là biến quan trọng nhất (0,78). Số liệu đầy đủ ở `results/ket_qua.json`.
 
 ## Cấu trúc thư mục
 ```
-data/      chỉ chứa hướng dẫn tải dữ liệu (không đăng lại dữ liệu gốc)
+data/      dữ liệu gốc KaggleV2-May-2016.csv (CC BY-NC-SA 4.0), kèm README.md và LICENSE ghi nguồn
 src/       phan_tich_noshow.py: huấn luyện, đánh giá, sinh hình
 results/   ket_qua.json và các hình PNG; results/poster/ là bản hình lớn cho poster
-docs/      bài báo (PDF), báo cáo so sánh giấy phép
+docs/      báo cáo so sánh giấy phép nguồn mở (PDF)
 ```
 
 ## Cách chạy
 ```
 pip install -r requirements.txt
-# tải dữ liệu theo data/README.md, đặt data/KaggleV2-May-2016.csv.zip
+# dữ liệu đã có sẵn trong data/ (nếu thiếu, xem data/README.md để tải từ Kaggle)
 python src/phan_tich_noshow.py            # hình và ket_qua.json vào results/
 python src/phan_tich_noshow.py --poster   # hình chữ to, 400 dpi, vào results/poster/
 ```
 
 ## Giấy phép
-- **Mã nguồn và tài liệu do tác giả viết:** [MIT](LICENSE).
-- **Dữ liệu:** *Medical Appointment No Shows* (Joni Hoppen, Kaggle) theo **CC BY-NC-SA 4.0**, không thuộc giấy phép MIT của repo này và không được đăng lại ở đây. Chỉ dùng phi thương mại, phải ghi nguồn. Xem `data/README.md`.
+Repo có hai phần với hai giấy phép khác nhau:
+- **Mã nguồn và tài liệu do tác giả viết** (`src/`, `results/`, `docs/`, README...): [MIT](LICENSE).
+- **Dữ liệu** trong `data/`: *Medical Appointment No Shows* của Joni Hoppen (Kaggle), giấy phép **CC BY-NC-SA 4.0**, đưa vào nguyên vẹn, không chỉnh sửa, và **không** thuộc giấy phép MIT. Chỉ dùng phi thương mại, phải ghi nguồn, bản chia sẻ lại giữ cùng giấy phép. Nguồn đầy đủ ở `data/README.md` và `data/LICENSE`.
 
 ## Đạo đức dữ liệu
 Dữ liệu đã được mã hóa mã bệnh nhân từ nguồn. Repo không cố nhận diện lại cá nhân. Mô hình chỉ ở mức xếp hạng rủi ro để ưu tiên nhắc lịch, không dùng để từ chối hay đặt chồng lịch tự động (precision khoảng 0,30).

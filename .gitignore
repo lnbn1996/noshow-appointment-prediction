@@ -1,6 +1,4 @@
-# Dữ liệu gốc (CC BY-NC-SA 4.0), không đăng lại
-data/*.csv
-data/*.zip
+# Dữ liệu (CC BY-NC-SA 4.0) được đưa vào repo kèm ghi nguồn đầy đủ, xem data/README.md và data/LICENSE
 __pycache__/
 *.pyc
 # File trung gian LaTeX

@@ -13,7 +13,6 @@ from sklearn.metrics import (accuracy_score, precision_score, recall_score, f1_s
                              roc_auc_score, roc_curve, confusion_matrix, ConfusionMatrixDisplay)
 
 here = pathlib.Path(__file__).resolve().parent
-zp = here.parent / "data" / "KaggleV2-May-2016.csv.zip"
 import sys
 POSTER = "--poster" in sys.argv  # python phan_tich_noshow.py --poster -> hinh_poster/ (chu to, 400 dpi)
 DPI = 400 if POSTER else 200
@@ -28,7 +27,27 @@ if POSTER:  # dung font Inter cho hinh poster neu co (khop font chu cua poster)
             fm.fontManager.addfont(_p); plt.rcParams["font.family"] = "Inter"; break
 C = {"No": "#4C78A8", "Yes": "#E45756"}
 
-df = pd.read_csv(zipfile.ZipFile(zp).open("KaggleV2-May-2016.csv"))
+CSV_NAME = "KaggleV2-May-2016.csv"
+
+
+def doc_du_lieu():
+    """Tim du lieu trong data/: file .csv, hoac bat ky file .zip nao chua file .csv do."""
+    data_dir = here.parent / "data"
+    csv = data_dir / CSV_NAME
+    if csv.exists():
+        return pd.read_csv(csv)
+    for z in sorted(data_dir.glob("*.zip")):
+        with zipfile.ZipFile(z) as zf:
+            if CSV_NAME in zf.namelist():
+                return pd.read_csv(zf.open(CSV_NAME))
+    raise SystemExit(
+        f"Khong thay du lieu trong {data_dir}.\n"
+        "Tai 'Medical Appointment No Shows' (Kaggle, CC BY-NC-SA 4.0) tai\n"
+        "https://www.kaggle.com/datasets/joniarroba/noshowappointments\n"
+        f"roi dat file {CSV_NAME} (hoac file .zip cua Kaggle) vao thu muc data/. Xem data/README.md.")
+
+
+df = doc_du_lieu()
 n0 = len(df)
 df["lead_days"] = (pd.to_datetime(df.AppointmentDay).dt.normalize()
                    - pd.to_datetime(df.ScheduledDay).dt.normalize()).dt.days
